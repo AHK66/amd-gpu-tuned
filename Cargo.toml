@@ -1,0 +1,34 @@
+[package]
+name = "amd-gpu-tuned"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+argon2 = "0.6"
+async-trait = "0.1"
+axum = { version = "0.8", features = ["json"] } # SSE is in axum 0.8 core; there is no "sse" feature
+clap = { version = "4", features = ["derive"] }
+futures-util = "0.3"
+libc = "0.2"
+libdrm_amdgpu_sys = { version = "0.8.16", default-features = false, features = ["dynamic_loading"] }
+nix = { version = "0.31", default-features = false, features = ["socket"] }
+rand = "0.8"
+rusqlite = { version = "0.32", features = ["bundled"] }
+rpassword = "7"
+rust-embed = { version = "8", features = ["mime-guess"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+tokio = { version = "1", features = ["full"] }
+tokio-stream = { version = "0.1", features = ["sync"] } # BroadcastStream is behind "sync"
+tokio-util = "0.7"
+toml = "0.8"
+tower-http = { version = "0.6", features = ["trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+zbus = { version = "5", features = ["tokio"] }
+
+[dev-dependencies]
+tempfile = "3"
+tower = { version = "0.5", features = ["util"] }

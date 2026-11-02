@@ -1,0 +1,12 @@
+/target
+/data
+.worktrees/
+.superpowers/
+data/
+ui/node_modules
+ui/dist/*
+!ui/dist/.gitkeep
+ui/playwright-report
+ui/test-results
+docs/.playwright-mcp/
+ui/.playwright-mcp/

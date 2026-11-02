@@ -1,0 +1,30 @@
+port = 8787
+
+[[preset]]
+name = "R9700 220W -70mV 1350MHz VRAM"
+notes = "Web-proven baseline: 220 W, -70 mV, 1350 MHz VRAM clock. Stable on most R9700 cards."
+[preset.settings]
+power_cap_w = 220.0
+voltage_offset_mv = -70
+max_mclk_mhz = 1350
+
+[[preset]]
+name = "R9700 210W -70mV"
+notes = "210 W cap, -70 mV, stock VRAM. External ref (-80 mV, stock RAM): 77.6 tok/s 4K decode."
+[preset.settings]
+power_cap_w = 210.0
+voltage_offset_mv = -70
+
+[[preset]]
+name = "R9700 220W -70mV"
+notes = "220 W cap, -70 mV, stock VRAM."
+[preset.settings]
+power_cap_w = 220.0
+voltage_offset_mv = -70
+
+[[preset]]
+name = "R9700 225W -70mV"
+notes = "225 W cap, -70 mV, stock VRAM. External ref (-80 mV, stock RAM): 78.3 tok/s 4K decode."
+[preset.settings]
+power_cap_w = 225.0
+voltage_offset_mv = -70

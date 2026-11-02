@@ -1,0 +1,14 @@
+[Unit]
+Description=amd-gpu-tuned daemon (amdgpu power/fan/overdrive)
+After=multi-user.target
+
+[Service]
+Type=simple
+# Install the release binary to /opt/amd-gpu-tuned/ and adjust ExecStart /
+# --data if you install it elsewhere. The data dir holds the SQLite DB.
+ExecStart=/opt/amd-gpu-tuned/amd-gpu-tuned --data /var/lib/amd-gpu-tuned
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
